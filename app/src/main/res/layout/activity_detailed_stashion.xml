@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.aziz.tariq.deejay.DetailedStashionActivity">
+
+    <TextView
+        android:id="@+id/currently_playing_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:alpha=".87"
+        android:text="Currently Playing"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/track_list_button"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignBottom="@+id/currently_playing_label"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:onClick="viewTrackList"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_list_black_24dp" />
+
+    <ImageView
+        android:id="@+id/track_image"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_below="@+id/currently_playing_label" />
+
+    <TextView
+        android:id="@+id/track_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/track_image"
+        android:layout_centerHorizontal="true"
+        android:text="Song Title"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/track_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:alpha=".54"
+        android:text="Artist Name"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/upload_user_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uploaded by"
+        android:alpha=".54"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/artist_name"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_track_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="skipTrack"
+        android:src="@drawable/ic_skip_next_white_24dp"
+        android:tint="@android:color/white" />
+
+
+
+
+</RelativeLayout>
